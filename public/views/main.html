@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/views/style.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  <body>
+    <br>
+    <br>
+    <div class="container">
+         <img class="w3-image" src="https://i.pinimg.com/originals/5b/78/74/5b7874a918ef0501bce81f134d45a175.jpg" alt="Strawberry Milk">
+         <div class="text">“Anyone can cook, but only the fearless can be great.”</div>
+      </div>
+
+<div class="top">
+    <img src="/views/PomegramLogo.png" alt="Pomegram" width="50" height="50">
+    <div class="logo">Pomegram</div>
+    <a href="list" class="barItem">Search</a>
+    <a href="upload" class="barItem">Upload</a>
+    <a href="/" class="barItem">Home</a>
+
+</div>
+      <div class="mainBody">
+        <a href="upload">
+          <button type="button">UPLOAD A RECIPE</button>
+        </a>
+
+          <form action="#">
+            <br>
+              <fieldset>
+<!--
+              <legend>Allergies</legend>
+              <label for="peanuts">Peanuts:</label>
+              <input type="checkbox" id="peanuts" name="allergies" value="Peanuts" >
+
+              <label for="shellfish">Shellfish:</label>
+              <input type="checkbox" id="shellfish" name="allergies" value="Shellfish" >
+
+              <label for="lactose">Lactose:</label>
+              <input type="checkbox" id="lactose" name="allergies" value="Lactose" >
+
+
+              <label for="glutenFree">Gluten:</label>
+              <input type="checkbox" id="glutenFree" name="allergies" value="Gluten Free" >
+
+
+              <label for="eggs">Eggs:</label>
+              <input type="checkbox" id="eggs" name="allergies" value="Eggs" >
+              </fieldset>
+
+              <br>
+              <fieldset>
+              <legend>Diets</legend>
+              <label for="vegan">Vegan:</label>
+              <input type="checkbox" id="vegan" name="diets" value="Vegan" >
+
+              <label for="vegetarian">Vegetarian:</label>
+              <input type="checkbox" id="vegetarian" name="diets" value="Vegetarian" >
+
+              <label for="keto">Keto:</label>
+              <input type="checkbox" id="keto" name="diets" value="Keto"
+
+              <label for="high protein">High Protein:</label>
+              <input type="checkbox" id="high protein" name="diets" value="High Protein" >
+
+
+-->
+            Welcome to Pomegram, a food blog! Feel free to upload recipes on our upload tab and check out fellow users' recipes on the search tab!
+            </fieldset>
+            <br>
+            <div class="outer-div">
+              <div class="inner-div">
+            
+                <input id="createButton" class = "bttn" type="button" value="Find recipes" onclick="location.href='list';"/>
+              </div>
+            </div>
+
+            </form>
+</div>
+
+
+<p id="parag"></p>
+    <script src="js/filters.js"></script>
+
+  </body>
+</html>

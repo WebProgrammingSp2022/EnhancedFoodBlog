@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  <body>
+        <hr>
+            <form action="#">
+                <fieldset>
+                <legend>Food Blog</legend>
+                    <div>
+
+
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" name="name">
+                        <br>
+                        <label for="ingredients">Ingredients:</label>
+                        <br>
+                        <textarea  id="ingredients" rows="10" cols="119" name="comments" form="usrform"></textarea>
+                        <br>
+                        <label for="instructions">Instructions:</label>
+                        <br>
+                        <textarea id="instructions" rows="10" cols="119" name="comments" form="usrform"></textarea>
+                        <br>
+                        <fieldset>
+                        <legend>Allergies</legend>
+                        <label for="peanuts">Peanuts:</label>
+                        <input type="checkbox" id="peanuts" name="allergies" value="Peanuts" >
+
+                        <label for="shellfish">Shellfish:</label>
+                        <input type="checkbox" id="shellfish" name="allergies" value="Shellfish" >
+
+                        <label for="lactose">Lactose:</label>
+                        <input type="checkbox" id="lactose" name="allergies" value="Lactose" >
+                        </fieldset>
+                        <br>
+                        <fieldset>
+                        <legend>Diets</legend>
+                        <label for="vegan">Vegan:</label>
+                        <input type="checkbox" id="vegan" name="diets" value="Vegan" >
+
+                        <label for="keto">Keto:</label>
+                        <input type="checkbox" id="keto" name="diets" value="Keto"
+
+                        <label for="high protein">High Protein:</label>
+                        <input type="checkbox" id="high protein" name="diets" value="High Protein" >
+                        </fieldset>
+
+<!-- ingredients textarea
+     instructions textarea
+     allergies Checkbox
+     diets Checkbox-->
+
+                <input type="reset" name="reset" value="Clear Form">
+<!--                <input type="submit" name="send" value="Send Form">     -->
+                <input id="createButton" type="button" value="Create" />
+
+
+<!--      <input id="readButton" type="button" value="Read" />
+      <input id="updateButton" type="button" value="Update" />
+      <input id="deleteButton" type="button" value="Delete" />-->
+
+    </fieldset>
+
+            </form>
+<p id="parag"></p>
+    <script src="js/home.js"></script>
+
+  </body>
+</html>

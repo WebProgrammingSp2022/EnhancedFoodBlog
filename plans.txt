@@ -1,0 +1,213 @@
+Ideas:
+----------Upload recipe--------
+Name
+Image
+Text box- Ingredients (multiply recipe)
+Text box- instructions
+Checkbox allergies - peanut
+diet - Vegan, veggie, high protein
+
+-----------Filter recipe----------
+
+--------------4/6 - Wednesday----------------
+Tasks for the day:
+index.html - Nico (remember ID)  Tag EX: <ul id="list"></ul>
+my database - Talia
+routes - Sierra
+home.js - Allison
+
+Completed:
+Talia - myDatabase.js basic parameters (post and display), parameters in Data.js
+Allison - added into home.js data values
+Sierra - create in routes.js
+Nico - added HTML, index.js
+
+--------------4/7 - Thursday----------------
+Tasks for the day:
+index.html - Nico
+my database -
+routes -
+home.js -
+
+Completed:
+Talia -
+Allison -
+Sierra -
+Nico -
+
+--------------4/8 - Friday----------------
+Tasks for the day:
+index.html - Nico
+my database -
+routes -
+home.js -
+
+Completed:
+Talia -
+Allison - hello
+Sierra - ehyyyyy
+Nico -
+
+--------------4/13 - Wednesday----------------
+Tasks for the day:
+index.html - Nico
+my database -
+routes -
+home.js -
+
+Completed:
+Talia -
+Allison - Trying to add a folder
+Sierra - Addeed in buttons to connect to other parts of the website
+Nico -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ඞ
