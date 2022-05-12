@@ -21,6 +21,14 @@ router.get("/upload",function(req,res){
     res.sendFile(path.resolve(__dirname + "/public/views/upload.html"));  //changed
 });
 
+router.get("/signup",function(req,res){
+    res.sendFile(path.resolve(__dirname + "/public/views/signup.html"));  //changed
+});
+
+router.get("/login",function(req,res){
+    res.sendFile(path.resolve(__dirname + "/public/views/login.html"));  //changed
+});
+
 let index = 0
 
 let filename2;
