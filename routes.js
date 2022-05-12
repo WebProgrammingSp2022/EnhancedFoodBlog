@@ -1,4 +1,5 @@
 let path = require("path");
+var passport = require("passport");
 let express = require("express");
 var formidable = require('formidable');
 var mv = require('mv');
