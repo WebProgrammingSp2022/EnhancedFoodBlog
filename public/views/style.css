@@ -22,7 +22,6 @@ letter-spacing: 3px;
   float: right;
   text-decoration: none;
   color: rgb(183, 145, 108);
-
 }
 .top {
   font-size: 40px;
@@ -54,6 +53,42 @@ letter-spacing: 3px;
   margin-right: 0;
   z-index: 2;
 }
+.side img {
+    position:absolute;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#cf1 {
+
+}
+#cf2 {
+    -webkit-animation-delay: -4s;
+}
+#cf3 {
+    -webkit-animation-delay: -2s;
+}
+
 .right {
   margin-left: 52%;
 }
