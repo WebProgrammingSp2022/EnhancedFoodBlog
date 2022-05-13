@@ -38,27 +38,28 @@ letter-spacing: 3px;
   margin: 0%;
   margin-right: 0;
   z-index: 2;
-
 }
 .side {
+  text-align: left;
   font-size: 40px;
   color: rgb(183, 145, 108);
-  background-color: rgb(255, 193, 240);
-  border-bottom-color: rgb(255, 193, 240);
+  background-color: rgb(154, 201, 157);
+  border-bottom-color: rgb(154, 201, 157);
   border-bottom-style: solid;
-  height: auto;
+  height: 100%;
   letter-spacing: 2px;
   position: fixed;
   width: 50%;
-  margin: 0%;
+  margin-top: 1.3em;
   margin-right: 0;
   z-index: 2;
-
+}
+.right {
+  margin-left: 52%;
 }
 #w3-image {
   width: 100%;
   height: auto;
-
 }
 .container{
   position: relative;
@@ -173,6 +174,15 @@ input[type=text] {
     color: rgb(183,145,108);
 }
 input[type=text]:focus {
+    outline: none !important;
+    border-color: rgb(85,59,34);
+}
+input[type=password] {
+    border-style: solid;
+    border-color: rgb(85,59,34);
+    color: rgb(183,145,108);
+}
+input[type=password]:focus {
     outline: none !important;
     border-color: rgb(85,59,34);
 }
