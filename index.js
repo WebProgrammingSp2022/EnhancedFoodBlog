@@ -2,24 +2,31 @@ var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var express = require("express");
 
-var flash = require("connect-flash");
 var mongoose = require("mongoose");
 var passport = require("passport");
 var path = require("path");
 var session = require("express-session");
+var flash = require("connect-flash");
 
 var setUpPassport = require("./setuppassport");
 var routes = require("./routes");
 var routesData = require("./routesData");
 
+
 var app = express();
+
+
+app.use(flash());
+
 app.use('/favicon.ico', express.static('favicon.png'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use('/js', express.static('./public/js'));
 app.use('/views', express.static('./public/views'));
 app.use('/', express.static('./public'));
-app.use(routes);
+
+app.use(bodyParser.urlencoded({ extended: true }));   //added
+app.use(bodyParser.json());
 
 mongoose.connect("mongodb://localhost:27017/seeds");
 setUpPassport();
@@ -35,7 +42,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
