@@ -138,6 +138,20 @@ router.put('/update', function(req, res){
       res.json({error:false});
     }
 
+    router.get("/userInfo",function(req,res){
+  console.log("get userInfo");
+     if (req.isAuthenticated()) {
+  console.log("req isAuthenticated");
+  console.log("valueJY = " + req.user.valueJY);    /* user defined value */
+    return(db.getData(req.user.username,res),req.user.username);
+   // res.json({username:req.user.username});
+  }
+  else {
+  console.log("req is not Authenticated");
+    res.json(null);
+  }
+});
+
 
 
 
