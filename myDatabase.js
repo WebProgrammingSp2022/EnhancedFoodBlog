@@ -1,61 +1,65 @@
+var express = require("express");
+var mongoose = require("mongoose");
+var DataModel = require("./models/Data");
 const Data = require('./Data');
 
 let myDatabase = function() {
-    this.data = [];
 }
 
-let dataIndex = 0;
 
-myDatabase.prototype.displayData = function() {
-    for (let i=0;i<this.data.length;i++) {
-        console.log(this.data[i]);
-    }
+
+myDatabase.prototype.postData = function(data,res) {
+  let obj = {id:data.id, name:data.name, ingredients:data.ingredients, instructions:data.instructions, allergies: data.allergies, diet:data.diet,filename2:data.filename2};
+  DataModel.create(obj,function(error,info) {
+      if (error) {
+          return res.json({error:true});
+      }
+      return res.json({error:false});
+  });
 }
 
-myDatabase.prototype.postData = function(_data) {
-  for (let i=0;i<this.data.length;i++) {
-    if (this.data[i] && this.data[i].id == _data.id) {
-      return false;
-    }
-  }
-  this.data[dataIndex++] =
-  new Data(_data.id,_data.name,_data.ingredients,_data.instructions,_data.allergies,_data.diet,_data.filename2);
-  return true;
+myDatabase.prototype.getData = function(name,res) {
+
+  DataModel.find({id:data.id},function(error,info) {
+      if (error) {
+          return res.json({error:true});
+      }
+      else if (info == null) {
+          return res.json({error:true});
+      }
+      if (info.length == 1)
+          return res.json({error:false,name:info[0].name,ingredients:info[0].ingredients, instructions:info[0].instructions, allergies: info[0].allergies, diet:info[0].diet,filename2:info[0].filename2});
+      else
+          return res.json({error:true});
+   });
 }
 
-myDatabase.prototype.getData = function(id) {
-  for (let i=0;i<this.data.length;i++) {
-    if (this.data[i] && id == this.data[i].id)
-    {
-      return(new Data(this.data[i].id,this.data[i].name,this.data[i].ingredients,this.data[i].instructions,this.data[i].allergies,this.data[i].diet,this.data[i].filename2));
-    }
-  }
-  return null;
-}
 
 /*
-myDatabase.prototype.putData = function(_data) {
-  for (let i=0;i<this.data.length;i++) {
-    if (this.data[i] && this.data[i].id == _data.id) {
-      this.data[i] =
-      new Data(_data.id,_data.name,_data.ingredients,_data.instructions,_data.allergies,_data.diet);
-      return true;
+myDatabase.prototype.putData = function(data,res) {
+  let obj = {id:data.id, name:data.name, ingredients:data.ingredients, instructions:data.instructions, allergies: data.allergies, diet:data.diet,filename2:data.filename2};
+  DataModel.findOneAndUpdate({name:data.name},{grade:data.grade},function(error,oldData) {
+    if (error) {
+      return res.json({error:true});
     }
-  }
-  return false;
+    else if (oldData == null) {
+      return res.json({error:true});
+    }
+    return res.json({error:false});
+  });
 }
 */
 /*
-myDatabase.prototype.deleteData = function(id) {
-  for (let i=0;i<this.data.length;i++) {
-    if (this.data[i] && id == this.data[i].id) {
-        let tempPtr = this.data[i];
-        this.data[i] = undefined;
-        return tempPtr;
-    }
-  }
-  return null;
+myDatabase.prototype.deleteData = function(ident,res) {
+    DataModel.remove({ident:ident},function(error,removed) {
+        if (error) {
+            return res.json({error:true});
+        }
+        if (removed.result.n == 0)
+            return res.json({error:true});
+        return res.json({error:false});
+    });
 }
 */
-//this is a test
+
 module.exports = myDatabase;

@@ -137,8 +137,7 @@ router.put('/update', function(req, res){
       }
       res.json({error:false});
     }
-
-    router.get("/userInfo",function(req,res){
+router.get("/userInfo",function(req,res){
   console.log("get userInfo");
      if (req.isAuthenticated()) {
   console.log("req isAuthenticated");
