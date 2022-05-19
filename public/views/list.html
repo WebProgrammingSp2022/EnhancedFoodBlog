@@ -16,27 +16,68 @@
         <a href="upload" class="barItem">Upload</a>
         <a href="/" class="barItem">Home</a>
 
-    </div>
-    <br>
-    <br>
-        <hr>
-            <h3> LIST OF RECIPES </h3>
-            <a href="upload">
-              <button class="button-53" role="button">UPLOAD A RECIPE</button>
-            </a>
-            <br>
-            <a href="/">
-            </a>
-
+      </div>
       <br>
       <br>
-       Gallery of Images:
-        <div id="images"></div>
-        Recipes:
-        <div id="parag"></div>
+          <hr>
+              <h3> LIST OF RECIPES </h3>
+              <a href="upload">
+                <button class="button-53" role="button">UPLOAD A RECIPE</button>
+              </a>
+              <br>
+              <a href="/">
+              </a>
+              <div id = "filterControls">
+              <fieldset>
+              <legend>Allergies</legend>
+
+              <label for="peanuts">Peanuts:</label>
+              <input type="checkbox" id="peanuts" name="allergies" value="Peanuts" >
+
+              <label for="shellfish">Shellfish:</label>
+              <input type="checkbox" id="shellfish" name="allergies" value="Shellfish" >
+
+              <label for="lactose">Lactose:</label>
+              <input type="checkbox" id="lactose" name="allergies" value="Lactose" >
 
 
-    <script src="js/main.js"></script>
+              <label for="glutenFree">Gluten:</label>
+              <input type="checkbox" id="glutenFree" name="allergies" value="Gluten Free" >
 
-  </body>
-</html>
+
+              <label for="eggs">Eggs:</label>
+              <input type="checkbox" id="eggs" name="allergies" value="Eggs" >
+
+              </fieldset>
+
+              <br>
+              <fieldset>
+
+              <legend>Diets</legend>
+              <label for="vegan">Vegan:</label>
+              <input type="checkbox" id="vegan" name="diets" value="Vegan" >
+
+              <label for="vegetarian">Vegetarian:</label>
+              <input type="checkbox" id="vegetarian" name="diets" value="Vegetarian" >
+
+              <label for="keto">Keto:</label>
+              <input type="checkbox" id="keto" name="diets" value="Keto">
+
+              <label for="high protein">High Protein:</label>
+              <input type="checkbox" id="high protein" name="diets" value="High Protein" >
+
+            </fieldset>
+  </div>
+        <br>
+        <br>
+         Gallery of Images:
+          <div id="images"></div>
+          Recipes:
+
+          <div id="parag" ></div>
+
+
+      <script src="js/main.js"></script>
+
+    </body>
+  </html>
