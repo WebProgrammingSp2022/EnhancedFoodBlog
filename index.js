@@ -28,7 +28,7 @@ app.use('/', express.static('./public'));
 app.use(bodyParser.urlencoded({ extended: true }));   //added
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:27017/seeds");
+mongoose.connect("mongodb://127.0.0.1:27017/seeds"); //change localhost to 127.0.0.1 
 setUpPassport();
 app.set("port", process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, "public")));
