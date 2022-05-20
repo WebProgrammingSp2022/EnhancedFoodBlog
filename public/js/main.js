@@ -14,15 +14,14 @@ function readClicked(){
 
                     let div = document.createElement("div");
 
-
                   //  imgloop();
-                    for(let i=0;i<data.val.length;i++)
+                    for(let i=0;i<data.recipe.length;i++)
                     {
                             let div = document.createElement("div");
                             let pa = document.createElement("pa");
                             div.classList.add("file-row")
                             console.log(i)
-                            if(data.val[i]==null)
+                            if(data.recipe[i]==null)
                             {
                               console.log("error")
                             }
@@ -30,7 +29,7 @@ function readClicked(){
 
 
                             var img = new Image(200, 200);
-                            img.src = "/images/" + data.val[i].filename2;
+                            img.src = "/images/" + data.recipe[i].filename2;
 
 
                             var src = document.getElementById("images");
@@ -38,16 +37,16 @@ function readClicked(){
                             //image.src = "/images/"+ data.val[i].filename2;
 
                             pa.innerHTML += "<br/>"
-                            pa.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
-                            pa.innerHTML += "<br /> Instructions:" + data.val[i].instructions;
-                            pa.innerHTML += "<br /> Allergies:" + data.val[i].allergies;
-                            for(let j = 0; j < data.val[i].allergies.length; j++){
-                              $(div).addClass(data.val[i].allergies[j]);
+                            pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
+                            pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
+                            pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
+                            for(let j = 0; j < data.recipe[i].allergies.length; j++){
+                              $(div).addClass(data.recipe[i].allergies[j]);
                             }
-                            pa.innerHTML += "<br /> Diets:" + data.val[i].diet;
+                            pa.innerHTML += "<br /> Diets:" + data.recipe[i].diet;
 
-                            for(let j = 0; j < data.val[i].diet.length; j++){
-                              $(div).addClass(data.val[i].diet[j]);
+                            for(let j = 0; j < data.recipe[i].diet.length; j++){
+                              $(div).addClass(data.recipe[i].diet[j]);
                             }
 
                             div.appendChild(pa);

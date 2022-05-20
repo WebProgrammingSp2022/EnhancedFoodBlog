@@ -84,11 +84,11 @@ router.get('/read', function(req, res){
     for(let i=0;i<index;i++)
     {
 
-        recipe[i] = new Data (db.getData(jdex,res));
+        recipe[i] = db.getData(jdex,res);
       //  console.log(recipe[i])
         //jdex++;
     }
-  //  console.log(db.getData(jdex,res))
+    //console.log(db.getData(jdex,res))
     jdex=1;
     return(recipe)
 
