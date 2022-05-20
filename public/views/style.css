@@ -230,3 +230,8 @@ input[type=password]:focus {
     width: 300px;
     height: 100px;
 }
+
+.file-row {
+  width:100%;
+  border:1px solid #ccc;
+}
