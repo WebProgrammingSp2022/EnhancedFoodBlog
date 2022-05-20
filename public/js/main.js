@@ -61,4 +61,5 @@ function imgloop()
 }
 $(document).ready(function(){
  readClicked();
+ 
 });
