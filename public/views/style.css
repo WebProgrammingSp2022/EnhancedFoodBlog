@@ -16,6 +16,28 @@ body {
 h1, h2, h3, h4, h5, h6 {
 font-family: "Playfair Display";
 letter-spacing: 3px;
+text-align: center;
+}
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2 span {
+  background: rgb(154, 201, 157);
+}
+h2:before,
+h2:after {
+  background: rgb(154, 201, 157);
+  height: 10px;
+  flex: 1;
+  content: '';
+}
+h2.left:after {
+  background: none;
+}
+h2.right:before {
+  background: none;
 }
 .barItem {
   padding: 0 20px;
@@ -91,27 +113,58 @@ letter-spacing: 3px;
 .right {
   margin-left: 52%;
 }
-#w3-image {
-  width: 100%;
-  height: auto;
-}
-.container{
-  position: relative;
-}
 .w3-image{
   width: 100%;
-  height: auto;
+  height: 475px;
 }
 fieldset
 {
   border-color: rgb(85,59,34);
   border-style: solid;
 }
+.container{
+  max-width: 1500px;
+  width: 95%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  grid-gap: 20px;
+}
+.card{
+  max-width: 400px;
+  flex: 1 1 210px;
+  text-align: center;
+  height: 500px;
+  color: rgb(85,59,34);
+  background-color: rgb(183, 145, 108);
+  border: 3px solid rgb(85,59,34);
+  margin: 20px;
+}
+#cardImage{
+  height: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+#cardImage img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#cardText{
+  padding-left: 1em;
+  text-align: left;
+  line-height: 3em;
+  height: 25%;
+
+}
 button {
    border: none;
    padding: 10px 27px;
    padding-bottom: 5px;
-   background-color: rgb(183 ,145 ,108);
+   background-color: rgb(183, 145, 108);
    font-family: "Trebuchet MS", Georgia, Serif;
    color: white;
    font-size: 16px;
@@ -157,12 +210,8 @@ input[type=file]:hover {
   color: white;
   font-size: 16px
 }
-.mainBody{
-  padding-left: 20px;
-  padding-top: 20px;
-}
 .text {
-    background-color: rgba(242,235,216,.9);
+    background-color: rgba(242,235,216,.75);
     font-size: 5vw;
     font-weight: bold;
     text-align: center;

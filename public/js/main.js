@@ -8,11 +8,16 @@ function readClicked(){
             success: function(data){
 
                   //  let ar = [];
+                    //let ca = document.createElement("ca");
+                    //let card = document.getElementById("card");
+                    //let im = document.createElement("im");
+                    //let images = document.getElementById("images");
                     let pa = document.createElement("pa");
                     let p = document.getElementById("parag");
                   //  imgloop();
                     for(let i=0;i<data.val.length;i++)
                     {
+                          //  card.appendChild(ca);
                             console.log(i)
                             if(data.val[i]==null)
                             {
