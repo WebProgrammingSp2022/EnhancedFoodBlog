@@ -13,13 +13,19 @@ function readClicked(){
                     //let im = document.createElement("im");
                     //let images = document.getElementById("images");
                     let pa = document.createElement("pa");
+
                     let p = document.getElementById("parag");
+
+                    let div = document.createElement("div");
+
                   //  imgloop();
-                    for(let i=0;i<data.val.length;i++)
+                    for(let i=0;i<data.recipe.length;i++)
                     {
-                          //  card.appendChild(ca);
+                            let div = document.createElement("div");
+                            let pa = document.createElement("pa");
+                            div.classList.add("file-row")
                             console.log(i)
-                            if(data.val[i]==null)
+                            if(data.recipe[i]==null)
                             {
                               console.log("error")
                             }
@@ -27,19 +33,33 @@ function readClicked(){
 
 
                             var img = new Image(200, 200);
-                            img.src = "/images/" + data.val[i].filename2;
+                            img.src = "/images/" + data.recipe[i].filename2;
 
 
                             var src = document.getElementById("images");
                             src.appendChild(img);
                             //image.src = "/images/"+ data.val[i].filename2;
-                            p.innerHTML += "<br/>"
-                            p.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
-                            p.innerHTML += "<br /> Instructions:" + data.val[i].instructions;
-                            p.innerHTML += "<br /> Allergies:" + data.val[i].allergies;
-                            p.innerHTML += "<br /> Diets:" + data.val[i].diet;
+
+                            pa.innerHTML += "<br/>"
+                            pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
+                            pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
+                            pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
+                            for(let j = 0; j < data.recipe[i].allergies.length; j++){
+                              $(div).addClass(data.recipe[i].allergies[j]);
+                            }
+                            pa.innerHTML += "<br /> Diets:" + data.recipe[i].diet;
+
+                            for(let j = 0; j < data.recipe[i].diet.length; j++){
+                              $(div).addClass(data.recipe[i].diet[j]);
+                            }
+
+                            div.appendChild(pa);
+
                     }
-                    p.appendChild(pa);
+
+                    div.appendChild(pa);
+                    p.appendChild(div);
+                    //p.classList.add("file-row")
                   }
 
               } ,
@@ -66,4 +86,33 @@ function imgloop()
 }
 $(document).ready(function(){
  readClicked();
+
+
+ function filterFilesList() {
+    	var rows = $('.file-row');
+
+    	var checked = $("#filterControls :checkbox:checked");
+
+    	if(checked.length){
+    		rows.show(200);
+        var type = []
+    		var arr = checked.map(function(){
+    			 type.push("." + $(this).val())
+
+    		}).get();
+        //var selector = arr.join('')
+        //console.log(selector)
+        for (let i = 0; i < type.length; i++){
+          $(type[i]).hide(200);
+        }
+
+
+
+    	} else {
+    		rows.show();
+    	}
+    }
+
+    $("#filterControls :checkbox").click(filterFilesList);
+    filterFilesList();
 });

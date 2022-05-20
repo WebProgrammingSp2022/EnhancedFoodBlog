@@ -54,7 +54,10 @@ function AllergyCheckbox(){
 
 
 $(document).ready(function(){
-
+  $.get("/userInfo",function(data){
+  if (data.name)
+    $("#main").html("Welcome " + data.name);
+  });
   //updateClicked();
   $("#updateButton").click(updateClicked);
 //  $("#readButton").click(readClicked);

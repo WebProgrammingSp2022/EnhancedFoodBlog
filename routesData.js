@@ -72,11 +72,7 @@ router.post('/create', function(req, res){
     filename2 = req.body.filename2;
 
     let obj = new Data(identifier,name,ingredients,instructions,allergies,diet,filename2);
-    let val = db.postData(obj);
-    if (val)
-        res.json({error:false});
-    else
-        res.json({error:true});
+    return(db.postData(obj,res));
 
 });
 
@@ -84,32 +80,23 @@ router.post('/create', function(req, res){
 router.get('/read', function(req, res){
 
     let jdex= 1; //this is another index
-    let val=[];
-    for(let i=0;i<db.data.length+1;i++)
+    let recipe=[];
+    for(let i=0;i<index;i++)
     {
-        val[i] = db.getData(jdex);
-        jdex++;
-    }
-    jdex=1;
 
-    if (val == null)
-        res.json({error:true});
-    else
-    {
-        res.json({error:false, val});
+        recipe[i] = db.getData(jdex,res);
+      //  console.log(recipe[i])
+        //jdex++;
     }
+    //console.log(db.getData(jdex,res))
+    jdex=1;
+    return(recipe)
+
 
 
 });
 
 router.put('/update', function(req, res){
-
-
-    //let obj = new Data(identifier,name);
-    //let val = db.putData(obj);
-
-
-
 
         let allergies1 = req.body.allergies;
         let diet = req.body.diet;
@@ -137,9 +124,10 @@ router.put('/update', function(req, res){
       }
       res.json({error:false});
     }
+
 router.get("/userInfo",function(req,res){
   console.log("get userInfo");
-     if (req.isAuthenticated()) {
+  if (req.isAuthenticated()) {
   console.log("req isAuthenticated");
   console.log("valueJY = " + req.user.valueJY);    /* user defined value */
     return(db.getData(req.user.username,res),req.user.username);

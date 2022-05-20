@@ -11,7 +11,6 @@ body {
   font-family: "Trebuchet MS", Georgia, Serif;
   background-color: rgb(242, 235, 216);
   margin: 0%;
-
 }
 h1, h2, h3, h4, h5, h6 {
 font-family: "Playfair Display";
@@ -59,6 +58,7 @@ h2.right:before {
   margin: 0%;
   margin-right: 0;
   z-index: 2;
+  white-space: normal;
 }
 .side {
   font-size: 40px;
@@ -278,4 +278,9 @@ input[type=password]:focus {
     margin: auto;
     width: 300px;
     height: 100px;
+}
+
+.file-row {
+  width:100%;
+  border:1px solid #ccc;
 }
