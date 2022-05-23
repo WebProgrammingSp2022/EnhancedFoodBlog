@@ -219,7 +219,7 @@ input[type=file]:hover {
     z-index: 1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
 }
 .logo {
     color: rgba(183,145,108);
