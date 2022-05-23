@@ -4,10 +4,10 @@ var formidable = require('formidable');
 var mv = require('mv');
 
 var User = require("./models/user");
-
 //Look at below web page for info on express.Router()
 //https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4
 let router = express.Router();
+
 
 //request is info sending to server from client.
 //response is info sending to client from server.
@@ -79,18 +79,14 @@ router.post('/create', function(req, res){
 
 router.get('/read', function(req, res){
 
-    let jdex= 1; //this is another index
-    let recipe=[];
-    for(let i=0;i<index;i++)
-    {
+  //  let jdex= 1; //this is another index
+  //  let recipe=[];
 
-        recipe[i] = db.getData(jdex,res);
-      //  console.log(recipe[i])
-        //jdex++;
-    }
+        db.getData(res);
+
     //console.log(db.getData(jdex,res))
-    jdex=1;
-    return(recipe)
+  //  jdex=1;
+  //  return(recipe)
 
 
 
