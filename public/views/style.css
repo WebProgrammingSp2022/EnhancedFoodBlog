@@ -269,14 +269,10 @@ input[type=password]:focus {
     outline: none !important;
     border-color: rgb(85,59,34);
 }
-.outer-div
-{
-    padding: 30px;
-}
 .inner-div
 {
     margin: auto;
-    width: 300px;
+    width: 220px;
     height: 100px;
 }
 
