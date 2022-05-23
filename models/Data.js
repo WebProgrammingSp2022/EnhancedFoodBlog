@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var Data = mongoose.model("Info",{
+var dataSchema = mongoose.Schema({
 	id: Number,
 	name: String,
 	ingredients: String,
@@ -9,6 +9,8 @@ var Data = mongoose.model("Info",{
 	diet: Array,
 	filename2: String
 });
+
+var Data = mongoose.model("Info",dataSchema);
 
 
 
