@@ -97,19 +97,19 @@ $(document).ready(function(){
  function filterFilesList() {
     	var rows = $('.file-row');
 
-    	var checked = $("#filterControls :checkbox:checked");
+    	var checkedAllergies = $("#filterControlsAllergies :checkbox:checked");
 
-    	if(checked.length){
+    	if(checkedAllergies.length){
     		rows.show(200);
-        var type = []
-    		var arr = checked.map(function(){
-    			 type.push("." + $(this).val())
+        var type1 = []
+    		var arr = checkedAllergies.map(function(){
+    			 type1.push("." + $(this).val())
 
     		}).get();
         //var selector = arr.join('')
         //console.log(selector)
-        for (let i = 0; i < type.length; i++){
-          $(type[i]).hide(200);
+        for (let i = 0; i < type1.length; i++){
+          $(type1[i]).hide(200);
         }
 
 
@@ -119,6 +119,31 @@ $(document).ready(function(){
     	}
     }
 
-    $("#filterControls :checkbox").click(filterFilesList);
+    $("#filterControlsDiet :checkbox").click(filterFilesList);
     filterFilesList();
+
+    var checkedDiet = $("#filterControlsDiet :checkbox:checked");
+
+    if(checkedDiet.length){
+      rows.hide(200);
+      var type2 = []
+      var arr = checkedDiet.map(function(){
+         type2.push("." + $(this).val())
+
+      }).get();
+      //var selector = arr.join('')
+      //console.log(selector)
+      for (let i = 0; i < type2.length; i++){
+        $(type2[i]).show(200);
+      }
+
+
+
+    } else {
+      rows.show();
+    }
+  }
+
+  $("#filterControlsAllergies :checkbox").click(filterFilesList);
+  filterFilesList();
 });
