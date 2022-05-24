@@ -142,7 +142,7 @@ $(document).ready(function(){
     } else {
       rows.show();
     }
-  }
+
 
   $("#filterControlsAllergies :checkbox").click(filterFilesList);
   filterFilesList();
