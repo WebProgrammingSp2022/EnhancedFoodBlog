@@ -32,13 +32,19 @@ function readClicked(){
                             else{
 
 
+
+                            //image.src = "/images/"+ data.val[i].filename2;
+
+
+                            //////////
+
                             var img = new Image(200, 200);
                             img.src = "/images/" + data.recipe[i].filename2;
 
-
                             var src = document.getElementById("images");
                             src.appendChild(img);
-                            //image.src = "/images/"+ data.val[i].filename2;
+
+
 
                             pa.innerHTML += "<br/>"
                             pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
