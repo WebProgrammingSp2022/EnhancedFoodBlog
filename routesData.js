@@ -2,6 +2,7 @@ let path = require("path");
 let express = require("express");
 var formidable = require('formidable');
 var mv = require('mv');
+var passport = require("passport");
 
 var User = require("./models/user");
 //Look at below web page for info on express.Router()
@@ -42,7 +43,9 @@ router.post('/fileupload', function(req, res) {
 
 
 router.post('/create', function(req, res){
-
+if (req.isAuthenticated()) {
+  console.log('hello')
+  console.log(req.user.username)
     index++
 
     let identifier = index
@@ -71,25 +74,18 @@ router.post('/create', function(req, res){
 
     filename2 = req.body.filename2;
 
-    let obj = new Data(identifier,name,ingredients,instructions,allergies,diet,filename2);
+    let obj = new Data(req.user.username, identifier,name,ingredients,instructions,allergies,diet,filename2);
     return(db.postData(obj,res));
+  }
+  else {
+    res.json(null)
+  }
 
 });
 
 
 router.get('/read', function(req, res){
-
-  //  let jdex= 1; //this is another index
-  //  let recipe=[];
-
         db.getData(res);
-
-    //console.log(db.getData(jdex,res))
-  //  jdex=1;
-  //  return(recipe)
-
-
-
 });
 
 router.put('/update', function(req, res){

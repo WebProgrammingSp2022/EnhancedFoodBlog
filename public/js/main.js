@@ -41,6 +41,10 @@ function readClicked(){
 
                             div.appendChild(img);
 
+
+
+                            pa.innerHTML += "<br/>"
+                            pa.innerHTML += "<br/> Username:" + data.recipe[i].username
                             pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
                             pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
                             pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
