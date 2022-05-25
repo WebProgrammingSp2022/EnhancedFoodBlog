@@ -8,10 +8,7 @@ function readClicked(){
             success: function(data){
 
                   //  let ar = [];
-                    //let ca = document.createElement("ca");
-                    //let card = document.getElementById("card");
-                    //let im = document.createElement("im");
-                    //let images = document.getElementById("images");
+
                     let pa = document.createElement("pa");
 
                     let p = document.getElementById("parag");
@@ -24,6 +21,7 @@ function readClicked(){
                             let div = document.createElement("div");
                             let pa = document.createElement("pa");
                             div.classList.add("file-row")
+
                             console.log(i)
                             if(data.recipe[i]==null)
                             {
@@ -41,8 +39,7 @@ function readClicked(){
                             var img = new Image(200, 200);
                             img.src = "/images/" + data.recipe[i].filename2;
 
-                            var src = document.getElementById("images");
-                            src.appendChild(img);
+                            div.appendChild(img);
 
 
 
@@ -59,6 +56,7 @@ function readClicked(){
                             for(let j = 0; j < data.recipe[i].diet.length; j++){
                               $(div).addClass(data.recipe[i].diet[j]);
                             }
+
 
                             div.appendChild(pa);
 

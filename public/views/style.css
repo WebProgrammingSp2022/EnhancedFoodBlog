@@ -122,15 +122,6 @@ fieldset
   border-color: rgb(85,59,34);
   border-style: solid;
 }
-.container{
-  max-width: 1500px;
-  width: 95%;
-  margin: 30px auto;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: space-between;
-  grid-gap: 20px;
-}
 .card{
   max-width: 400px;
   flex: 1 1 210px;
@@ -277,6 +268,18 @@ input[type=password]:focus {
 }
 
 .file-row {
-  width:100%;
+  max-width: 1500px;
+  width: 95%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  grid-gap: 20px;
   border:1px solid #ccc;
+  max-width: 400px;
+  text-align: center;
+  height: 400px;
+  color: rgb(85,59,34);
+  background-color: rgb(183, 145, 108);
+  border: 3px solid rgb(85,59,34);
 }
