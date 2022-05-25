@@ -24,6 +24,7 @@ function readClicked(){
                             let div = document.createElement("div");
                             let pa = document.createElement("pa");
                             div.classList.add("file-row")
+
                             console.log(i)
                             if(data.recipe[i]==null)
                             {
@@ -41,8 +42,7 @@ function readClicked(){
                             var img = new Image(200, 200);
                             img.src = "/images/" + data.recipe[i].filename2;
 
-                            var src = document.getElementById("images");
-                            src.appendChild(img);
+                            div.appendChild(img);
 
 
 
