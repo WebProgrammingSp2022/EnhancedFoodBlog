@@ -11,7 +11,7 @@ let myDatabase = function() {
 
 
 myDatabase.prototype.postData = function(data,res) {
-  let obj = {id:data.id, name:data.name, ingredients:data.ingredients, instructions:data.instructions, allergies: data.allergies, diet:data.diet,filename2:data.filename2};
+  let obj = {username:data.username, id:data.id, name:data.name, ingredients:data.ingredients, instructions:data.instructions, allergies: data.allergies, diet:data.diet,filename2:data.filename2};
   DataModel.create(obj,function(error,info) {
       if (error) {
           return res.json({error:true});

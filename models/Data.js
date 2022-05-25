@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 
 var dataSchema = mongoose.Schema({
+  username: String,
 	id: Number,
 	name: String,
 	ingredients: String,

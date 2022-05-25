@@ -83,7 +83,7 @@ router.get("/session", function(req, res) {
   console.log("get session");
   if (req.isAuthenticated()) {
     console.log("sendFile session.html")
-  let thePath = path.resolve(__dirname,"public/views/list.html");
+  let thePath = path.resolve(__dirname,"public/views/upload.html");
   res.sendFile(thePath);
   } else {
     console.log("sendFile login.html")
