@@ -115,7 +115,7 @@ h2.right:before {
 }
 .w3-image{
   width: 100%;
-  height: 475px;
+  height: 500px;
 }
 fieldset
 {
@@ -217,9 +217,9 @@ input[type=file]:hover {
     text-align: center;
     position: absolute;
     z-index: 1;
-    top: 50%;
+    top: 46%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -125px);
 }
 .logo {
     color: rgba(183,145,108);
