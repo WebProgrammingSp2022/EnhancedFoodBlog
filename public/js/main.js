@@ -94,7 +94,7 @@ $(document).ready(function(){
  readClicked();
 
 
- function filterFilesList() {
+ function filterFilesListAllergies() {
     	var rows = $('.file-row');
 
     	var checkedAllergies = $("#filterControlsAllergies :checkbox:checked");
@@ -119,9 +119,8 @@ $(document).ready(function(){
     	}
     }
 
-    $("#filterControlsDiet :checkbox").click(filterFilesList);
-    filterFilesList();
-
+function filterFilesListDiet() {
+    var rows = $('.file-row');
     var checkedDiet = $("#filterControlsDiet :checkbox:checked");
 
     if(checkedDiet.length){
@@ -142,8 +141,11 @@ $(document).ready(function(){
     } else {
       rows.show();
     }
+}
 
+  $("#filterControlsAllergies :checkbox").click(filterFilesListAllergies);
+  filterFilesListAllergies();
 
-  $("#filterControlsAllergies :checkbox").click(filterFilesList);
-  filterFilesList();
+  $("#filterControlsDiet :checkbox").click(filterFilesListDiet);
+  filterFilesListDiet();
 });
