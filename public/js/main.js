@@ -8,10 +8,7 @@ function readClicked(){
             success: function(data){
 
                   //  let ar = [];
-                    //let ca = document.createElement("ca");
-                    //let card = document.getElementById("card");
-                    //let im = document.createElement("im");
-                    //let images = document.getElementById("images");
+
                     let pa = document.createElement("pa");
 
                     let p = document.getElementById("parag");
@@ -44,9 +41,6 @@ function readClicked(){
 
                             div.appendChild(img);
 
-
-
-                            pa.innerHTML += "<br/>"
                             pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
                             pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
                             pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
@@ -58,6 +52,7 @@ function readClicked(){
                             for(let j = 0; j < data.recipe[i].diet.length; j++){
                               $(div).addClass(data.recipe[i].diet[j]);
                             }
+
 
                             div.appendChild(pa);
 
