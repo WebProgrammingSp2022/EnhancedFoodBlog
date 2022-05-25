@@ -19,7 +19,7 @@ function createClicked(){
             success: function(data){
                 if(data==null)
                 {
-                alert("Log in to upload recipes")
+                    alert("Log in to upload recipes")
                 }
 
               } ,
