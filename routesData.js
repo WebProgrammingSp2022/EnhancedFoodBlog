@@ -44,12 +44,9 @@ router.post('/fileupload', function(req, res) {
 
 router.post('/create', function(req, res){
 if (req.isAuthenticated()) {
-  console.log('hello')
-  console.log(req.user.username)
     index++
 
     let identifier = index
-
 
     let name = req.body.name.trim();
     if (name == "") {
@@ -74,7 +71,7 @@ if (req.isAuthenticated()) {
 
     filename2 = req.body.filename2;
 
-    let obj = new Data(req.user.username, identifier,name,ingredients,instructions,allergies,diet,filename2);
+    let obj = new Data(identifier,req.user.username,name,ingredients,instructions,allergies,diet,filename2);
     return(db.postData(obj,res));
   }
   else {
