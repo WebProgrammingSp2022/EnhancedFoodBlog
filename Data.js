@@ -1,7 +1,7 @@
 
-let Data = function(username, id,name,ingredients,instructions,allergies,diet,filename2) {
-    this.username=username;
+let Data = function(id,uname,name,ingredients,instructions,allergies,diet,filename2) {
     this.id = id;
+    this.uname=uname;
     this.name = name;
     this.ingredients = ingredients;
     this.instructions = instructions;
