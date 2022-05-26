@@ -10,16 +10,23 @@ function readClicked(){
                   //  let ar = [];
 
                     let pa = document.createElement("pa");
+                    pa.id = "::texting";
+                    pa.style.cssText = 'word-wrap:break-word;';
 
                     let p = document.getElementById("parag");
 
                     let div = document.createElement("div");
 
+
                   //  imgloop();
                     for(let i=0;i<data.recipe.length;i++)
                     {
                             let div = document.createElement("div");
+
                             let pa = document.createElement("pa");
+                            pa.id = "::texting";
+                            pa.style.cssText = 'word-wrap:break-word;';
+
                             div.classList.add("file-row")
 
                             console.log(i)
