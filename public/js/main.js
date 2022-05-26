@@ -43,8 +43,10 @@ function readClicked(){
 
                             //////////
 
-                            var img = new Image(200, 200);
+                            var img = new Image;
                             img.src = "/images/" + data.recipe[i].filename2;
+                            img.id = "::imging";
+                            img.style.cssText = 'width:100%';
 
                             div.appendChild(img);
 
