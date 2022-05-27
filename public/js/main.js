@@ -10,16 +10,23 @@ function readClicked(){
                   //  let ar = [];
 
                     let pa = document.createElement("pa");
+                    pa.id = "::texting";
+                    pa.style.cssText = 'word-wrap:break-word;';
 
                     let p = document.getElementById("parag");
 
                     let div = document.createElement("div");
 
+
                   //  imgloop();
                     for(let i=0;i<data.recipe.length;i++)
                     {
                             let div = document.createElement("div");
+
                             let pa = document.createElement("pa");
+                            pa.id = "::texting";
+                            pa.style.cssText = 'word-wrap:break-word;';
+
                             div.classList.add("file-row")
 
                             console.log(i)
@@ -36,15 +43,17 @@ function readClicked(){
 
                             //////////
 
-                            var img = new Image(200, 200);
+                            var img = new Image;
                             img.src = "/images/" + data.recipe[i].filename2;
+                            img.id = "::imging";
+                            img.style.cssText = 'width:100%';
 
                             div.appendChild(img);
 
 
 
                             pa.innerHTML += "<br/>"
-                            pa.innerHTML += "<br/> Recipe by:" + data.recipe[i].username
+                            pa.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
                             pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
                             pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
