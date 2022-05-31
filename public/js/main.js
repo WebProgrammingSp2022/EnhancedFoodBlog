@@ -102,104 +102,76 @@ $(document).ready(function(){
  readClicked();
 
 
- function filterFilesListAllergies() {
+ function filterFilesList() {
     	var rows = $('.file-row');
 
     	var checkedAllergies = $("#filterControlsAllergies :checkbox:checked");
-        var checkedDiet = $("#filterControlsDiet :checkbox:checked");
+      var checkedDiet = $("#filterControlsDiet :checkbox:checked");
 
 
-        if(checkedAllergies.length && checkedDiet.length){
-          console.log("both selected");
-          rows.show(200);
+      if(checkedAllergies.length && checkedDiet.length){
+        rows.hide(200);
+        var type1 = []
+           checkedAllergies.map(function(){
+           type1.push("." + $(this).val())
+
+        }).get();
+
+        //let's create set of allergies recipes, that we need to exclude
+        let allergiesSet = new Set();
+        for(let i=0;i<type1.length;i++){
+          allergiesSet.add(type1[i]);
+        }
+
+        var type2 = []
+        var arr = checkedDiet.map(function(){
+           type2.push("." + $(this).val());
+        }).get();
+
+        //Filter through database and show/hide recipes depending on both checkboxes
+
+        for (let i = 0; i < type2.length; i++){
+          if(!allergiesSet.has(type2[i])) {$(type2[i]).show(200);};
+          }
+
+        } else if(checkedAllergies.length){
+      		rows.show(200);
           var type1 = []
-          var arr = checkedAllergies.map(function(){
-             type1.push("." + $(this).val())
+      		var arr = checkedAllergies.map(function(){
+      			 type1.push("." + $(this).val())
 
-          }).get();
+      		}).get();
+
+          for (let i = 0; i < type1.length; i++){
+            $(type1[i]).hide(200);
+          }
+
+
+
+      	} else if(checkedDiet.length){
+          rows.hide(200);
           var type2 = []
           var arr = checkedDiet.map(function(){
              type2.push("." + $(this).val())
 
           }).get();
-          //var selector = arr.join('')
-          //console.log(selector)
-          /*
-          for (let j = 0; j < type2.length; j++){
-            $(type2[j]).show(200);
-            for (let i = 0; i < type1.length; i++){
-              if($(rows[j]).hasClass($(type1[i]))){
-                $(type1[i]).hide(200);
-              } else{
-                $(type1[i]).hide(200);
-              }
 
-            }
+          for (let i = 0; i < type2.length; i++){
+            $(type2[i]).show(200);
           }
-*/
 
-var name = arr[i];
-    if(name == value){
-      status = 'Exist';
-      break;
-    }
+
+
+          } else {
+            rows.show();
+          }
   }
 
-          let fullArray = fullArray.concat(type1,type2);
-          for (let i = 0; i < rows.length; i++){
 
 
-          }
+  $("#filterControlsAllergies :checkbox").click(filterFilesList);
+  filterFilesList();
 
-
-
-
-          //var selector = arr.join('')
-          //console.log(selector)
-
-
-        }else if(checkedAllergies.length){
-    		rows.show(200);
-        var type1 = []
-    		var arr = checkedAllergies.map(function(){
-    			 type1.push("." + $(this).val())
-
-    		}).get();
-        //var selector = arr.join('')
-        //console.log(selector)
-        for (let i = 0; i < type1.length; i++){
-          $(type1[i]).hide(200);
-        }
-
-
-
-    	} else if(checkedDiet.length){
-        rows.hide(200);
-        var type2 = []
-        var arr = checkedDiet.map(function(){
-           type2.push("." + $(this).val())
-
-        }).get();
-        //var selector = arr.join('')
-        //console.log(selector)
-        for (let i = 0; i < type2.length; i++){
-          $(type2[i]).show(200);
-        }
-
-
-
-      } else {
-        rows.show();
-      }
-    }
-
-function filterFilesListDiet() {
-
-}
-
-  $("#filterControlsAllergies :checkbox").click(filterFilesListAllergies);
-  filterFilesListAllergies();
-
-  $("#filterControlsDiet :checkbox").click(filterFilesListAllergies);
-  filterFilesListAllergies();
+  $("#filterControlsDiet :checkbox").click(filterFilesList);
+  filterFilesList();
 });
