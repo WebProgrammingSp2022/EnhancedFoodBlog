@@ -108,7 +108,7 @@ $(document).ready(function(){
 
 
       if(checkedAllergies.length && checkedDiet.length){
-        rows.hide(200);
+        rows.hide(0);
         var type1 = []
            checkedAllergies.map(function(){
            type1.push("." + $(this).val())
@@ -129,11 +129,11 @@ $(document).ready(function(){
         //Filter through database and show/hide recipes depending on both checkboxes
 
         for (let i = 0; i < type2.length; i++){
-          if(!allergiesSet.has(type2[i])) {$(type2[i]).show(200);};
+          if(!allergiesSet.has(type2[i])) {$(type2[i]).show(0);};
           }
 
         } else if(checkedAllergies.length){
-      		rows.show(200);
+      		rows.show(0);
           var type1 = []
       		var arr = checkedAllergies.map(function(){
       			 type1.push("." + $(this).val())
@@ -141,13 +141,13 @@ $(document).ready(function(){
       		}).get();
 
           for (let i = 0; i < type1.length; i++){
-            $(type1[i]).hide(200);
+            $(type1[i]).hide(0);
           }
 
 
 
       	} else if(checkedDiet.length){
-          rows.hide(200);
+          rows.hide(0);
           var type2 = []
           var arr = checkedDiet.map(function(){
              type2.push("." + $(this).val())
@@ -155,7 +155,7 @@ $(document).ready(function(){
           }).get();
 
           for (let i = 0; i < type2.length; i++){
-            $(type2[i]).show(200);
+            $(type2[i]).show(0);
           }
 
 

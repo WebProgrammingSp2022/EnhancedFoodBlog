@@ -17,10 +17,10 @@ function createClicked(){
                   },
 
             success: function(data){
-                if(data==null)
-                {
-                    alert("Log in to upload recipes")
-                }
+            if(data==null)
+            {
+               alert("Your recipe did not upload. Please log in")
+            }
 
               } ,
             dataType: "json"
