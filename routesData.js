@@ -48,6 +48,7 @@ if (req.isAuthenticated()) {
 
     let identifier = index
 
+
     let name = req.body.name.trim();
     if (name == "") {
         res.json({error:true});
