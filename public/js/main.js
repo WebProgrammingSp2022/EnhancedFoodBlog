@@ -35,6 +35,7 @@ function readClicked(){
 
                             div.classList.add("file-row")
 
+
                             console.log(i)
                             if(data.recipe[i]==null)
                             {
@@ -80,7 +81,6 @@ function readClicked(){
                             div.appendChild(diet);
 
                     }
-
                     div.appendChild(pa);
                     p.appendChild(div);
                     //p.classList.add("file-row")
