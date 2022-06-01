@@ -13,13 +13,14 @@ function readClicked(){
 
                     let p = document.getElementById("parag");
 
-                    let div = document.createElement("div");
+                    let div = document.createElement("brick");
+
 
 
                   //  imgloop();
                     for(let i=0;i<data.recipe.length;i++)
                     {
-                            let div = document.createElement("div");
+                            let div = document.createElement("brick");
 
 
 
