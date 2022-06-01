@@ -34,7 +34,6 @@ function readClicked(){
                             pa.style.cssText = 'word-wrap:break-word;';
 
                             div.classList.add("file-row")
-                            div.classList.add("recipeFormat")
 
                             console.log(i)
                             if(data.recipe[i]==null)
@@ -61,8 +60,8 @@ function readClicked(){
                             author.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             name.innerHTML += "<br /> Name:" + data.recipe[i].name
                             ingredients.innerHTML += "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
-                            pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
-                            pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
+                            instructions.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
+                            allergies.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
                             for(let j = 0; j < data.recipe[i].allergies.length; j++){
                               $(div).addClass(data.recipe[i].allergies[j]);
                             }
