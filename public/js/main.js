@@ -33,6 +33,7 @@ function readClicked(){
                             pa.style.cssText = 'word-wrap:break-word;';
 
                             div.classList.add("file-row")
+                            div.classList.add("recipeFormat")
 
 
                             console.log(i)
