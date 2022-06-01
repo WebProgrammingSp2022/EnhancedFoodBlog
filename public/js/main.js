@@ -58,7 +58,7 @@ function readClicked(){
 
 
                             name.innerHTML += "<br />" + data.recipe[i].name
-                            name.style.cssText = 'font-size:20px;color:rgb(154,201,157);word-wrap:break-word;';
+                            name.style.cssText = 'font-size:25px;color:rgb(242,235,216);word-wrap:break-word;';
                             author.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             ingredients.innerHTML += "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
                             instructions.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
