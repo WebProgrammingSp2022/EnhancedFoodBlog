@@ -22,12 +22,13 @@ function readClicked(){
                     {
                             let div = document.createElement("brick");
 
-
-
                             let pa = document.createElement("pa");
+
+
                             pa.style.cssText = 'word-wrap:break-word;';
 
                             div.classList.add("file-row")
+
 
                             console.log(i)
                             if(data.recipe[i]==null)
@@ -49,10 +50,10 @@ function readClicked(){
 
                             div.appendChild(img);
 
-
-
+                            pa.innerHTML += "<br /> Name:" + data.recipe[i].name
                             pa.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
-                            pa.innerHTML += "<br /> Name:" + data.recipe[i].name + "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
+
+                            pa.innerHTML += "<br /> Ingredients:" + data.recipe[i].ingredients;
                             pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
                             pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
                             for(let j = 0; j < data.recipe[i].allergies.length; j++){
@@ -64,11 +65,9 @@ function readClicked(){
                               $(div).addClass(data.recipe[i].diet[j]);
                             }
 
-
                             div.appendChild(pa);
 
                     }
-
                     div.appendChild(pa);
                     p.appendChild(div);
                     //p.classList.add("file-row")
