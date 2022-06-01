@@ -56,8 +56,8 @@ function readClicked(){
                             div.appendChild(img);
 
 
-                            name.innerHTML += "<br /> Name:" + data.recipe[i].name
-                            name.style.cssText = 'font-size:20px;color:rgb(154,201,157);word-wrap:break-word;';
+                            name.innerHTML += "<br />" + data.recipe[i].name
+                            name.style.cssText = 'font-size:30px;color:rgb(154,201,157);word-wrap:break-word;';
                             author.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             ingredients.innerHTML += "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
                             instructions.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
@@ -70,7 +70,6 @@ function readClicked(){
                             for(let j = 0; j < data.recipe[i].diet.length; j++){
                               $(div).addClass(data.recipe[i].diet[j]);
                             }
-
                             div.appendChild(name);
                             div.appendChild(author);
                             div.appendChild(ingredients);
