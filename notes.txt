@@ -4,3 +4,7 @@ Project due date: June 1st?
 Big to-do tasks:
 -Add filters (Sierra)
 -Add formatting to the recipe screen
+
+Sierra: Add more filter options and recipe text
+Allison: Likes
+Talia: Likes HTML/ recipe text
