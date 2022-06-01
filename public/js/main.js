@@ -56,7 +56,7 @@ function readClicked(){
                             div.appendChild(img);
 
 
-                            name.innerHTML += "<br /> Name:" + data.recipe[i].name
+                            name.innerHTML += "<br />" + data.recipe[i].name
                             name.style.cssText = 'font-size:20px;color:rgb(154,201,157);word-wrap:break-word;';
                             author.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             ingredients.innerHTML += "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
