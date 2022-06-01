@@ -23,7 +23,6 @@ function readClicked(){
                             let div = document.createElement("brick");
 
 
-
                             let author = document.createElement("author");
                             let name = document.createElement("name");
                             let ingredients = document.createElement("ingredients");
@@ -58,12 +57,12 @@ function readClicked(){
                             div.appendChild(img);
 
 
-
-                            author.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             name.innerHTML += "<br /> Name:" + data.recipe[i].name
+                            name.style.cssText = 'font-size:20px;color:rgb(154,201,157);word-wrap:break-word;';
+                            author.innerHTML += "<br/> Recipe by:" + data.recipe[i].uname
                             ingredients.innerHTML += "<br />"+  "Ingredients:" + data.recipe[i].ingredients;
-                            pa.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
-                            pa.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
+                            instructions.innerHTML += "<br /> Instructions:" + data.recipe[i].instructions;
+                            allergies.innerHTML += "<br /> Allergies:" + data.recipe[i].allergies;
                             for(let j = 0; j < data.recipe[i].allergies.length; j++){
                               $(div).addClass(data.recipe[i].allergies[j]);
                             }
@@ -73,9 +72,8 @@ function readClicked(){
                               $(div).addClass(data.recipe[i].diet[j]);
                             }
 
-
-                            div.appendChild(author);
                             div.appendChild(name);
+                            div.appendChild(author);
                             div.appendChild(ingredients);
                             div.appendChild(instructions);
                             div.appendChild(allergies);

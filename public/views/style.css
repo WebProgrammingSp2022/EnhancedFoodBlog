@@ -259,5 +259,5 @@ input[type=password]:focus {
 }
 
 .recipeFormat{
-  color:blue;
+  word-wrap:break-word;
 }
